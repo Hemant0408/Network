@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NetworkLibrary</string>
+    <string name="invalid_data">Invalid data</string>
+    <string name="invalid">Invalid</string>
+    <string name="nework_error">Network error</string>
+    <string name="network">Network</string>
+
 </resources>
