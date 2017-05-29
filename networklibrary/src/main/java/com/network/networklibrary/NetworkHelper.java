@@ -69,7 +69,7 @@ public class NetworkHelper<T> {
 
     protected GsonRequest createGsonRequest(@NonNull final Object requestTag, @NonNull MethodType type, @NonNull String endpoint, @Nullable T bodyParams, final Class<T> responseClass) {
         int methodType;
-        String url = NetworkLibrary.getProperty(NetworkLibrary.Property.URL_BASE) + endpoint;
+        String url = NetworkLibrary.getBase_url() + endpoint;
 
         switch (type) {
             case GET:
