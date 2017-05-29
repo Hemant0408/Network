@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.network.networklibrary.inherit.Response;
 import com.network.networklibrary.parsing.GsonRequest;
+import com.network.networklibrary.parsing.PreferenceKeys;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -68,7 +69,7 @@ public class NetworkHelper<T> {
 
     protected GsonRequest createGsonRequest(@NonNull final Object requestTag, @NonNull MethodType type, @NonNull String endpoint, @Nullable T bodyParams, final Class<T> responseClass) {
         int methodType;
-        String url = NetworkLibrary.getBase_url() + endpoint/*AppSettings.getProperty(AppSettings.Property.URL_BASE) + endpoint*/;
+        String url = NetworkLibrary.getProperty(NetworkLibrary.Property.URL_BASE) + endpoint;
 
         switch (type) {
             case GET:
@@ -128,8 +129,8 @@ public class NetworkHelper<T> {
 
         headers.put("Accept", "application/json, application/json.v2");
 
-        /*if (prefs.contains(PreferenceKeys.AUTH_KEY))
-            headers.put("X-API-KEY", prefs.getString(PreferenceKeys.AUTH_KEY, ""));*/
+        if (prefs.contains(PreferenceKeys.AUTH_KEY))
+            headers.put("X-API-KEY", prefs.getString(PreferenceKeys.AUTH_KEY, ""));
 
         headers.put("X-DEV-UUID", Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID));
 
