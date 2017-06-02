@@ -22,7 +22,7 @@ artifacts {
 }
 
 def _user = 'hemant0408'
-def _key =  'e5aec076eae060d96b475aa876c8dae266afeb8b'
+def _key =  '955e7f186bd93694003f8f4fe275774a5dae336f'
 //def _passphrase = System.getenv("BINTRAY_PASSPHRASE")
 
 if(project.rootProject.file('local.properties').exists()){
