@@ -1,0 +1,43 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.q2t'                               // Maven Group ID for the artifact
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.q2t'
+                artifactId 'networklibrary'
+
+                // Add your description here
+                name 'networklibrary'
+                description 'A library for network calls.'
+                url 'https://github.com/Hemant0408/network'
+
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'hemant0408'
+                        name 'Hemant Shroff'
+                        email 'shroff.hemant@gmail.com'
+                    }
+                }
+                scm {
+                    connection 'https://github.com/Hemant0408/network.git'
+                    developerConnection 'https://github.com/Hemant0408/network.git'
+                    url 'https://github.com/Hemant0408/network'
+                }
+            }
+        }
+    }
+}
+
+//from https://github.com/workarounds/bundler/blob/master/gradle/install-v1.gradle
