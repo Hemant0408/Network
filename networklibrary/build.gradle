@@ -41,7 +41,7 @@ dependencies {
 publish {
     groupId = 'com.q2t'
     artifactId = 'network'
-    publishVersion = '1.0.4'
+    publishVersion = '1.0.5'
     desc = 'A library for network calls.'
     website = 'https://github.com/Hemant0408/network'
 }
