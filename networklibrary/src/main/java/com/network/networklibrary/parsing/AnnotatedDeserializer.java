@@ -5,6 +5,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import com.network.networklibrary.inherit.Response;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
@@ -24,7 +25,13 @@ public class AnnotatedDeserializer<T> implements JsonDeserializer<T> {
         List<Field> invalidFields = new ArrayList<>();
         findMissingFields(target, invalidFields);
 
-        if (!invalidFields.isEmpty()) {
+        boolean isError = false;
+        if (target instanceof Response) {
+            Response response = (Response) target;
+            isError = response.hasErrors();
+        }
+
+        if (!invalidFields.isEmpty() && !isError) {
             String message = new String("Missing fields: {");
 
             for (Field f : invalidFields)

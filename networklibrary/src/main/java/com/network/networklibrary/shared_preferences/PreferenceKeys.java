@@ -1,4 +1,4 @@
-package com.network.networklibrary.parsing;
+package com.network.networklibrary.shared_preferences;
 
 /**
  * Created by aksha_000 on 12/29/2015.

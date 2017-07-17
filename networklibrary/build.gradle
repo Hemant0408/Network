@@ -33,32 +33,3 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.support:preference-v7:25.3.1'
 }
-
-ext {
-    bintrayRepo = 'maven' //the maven repo name (created on bintray)
-    bintrayName = 'networklibrary' //the name you want to give at your project on bintray
-    orgName = 'hemant0408' //your user name
-
-    publishedGroupId = 'com.q2t' //aaaa : the librairy group
-    artifact = 'network' //BBBB : the library name
-    libraryVersion = "1.0.0" //the librairy version
-
-    //the library will be : aaaa:BBBB:version
-
-    libraryName = 'networklib'
-    libraryDescription = 'A library for network calls.'
-
-    siteUrl = 'https://github.com/Hemant0408/network'
-    gitUrl = 'https://github.com/Hemant0408/network.git'
-
-    developerId = 'hemant0408'
-    developerName = 'Hemant Shroff'
-    developerEmail = 'shroff.hemant@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
-apply from: rootProject.file('gradle/install-v1.gradle')
-apply from: rootProject.file('gradle/bintray-android-v1.gradle')

@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.network.networklibrary.inherit.Response;
 import com.network.networklibrary.parsing.GsonRequest;
-import com.network.networklibrary.parsing.PreferenceKeys;
+import com.network.networklibrary.shared_preferences.PreferenceKeys;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -32,14 +32,6 @@ public class NetworkHelper<T> {
     protected enum MethodType {
         GET, POST, PUT
     }
-
-    /*public enum Status {
-        SUCCESS,
-        ERROR_INVALID_DATA,
-        ERROR_SERVER,
-        ERROR_NETWORK,
-        UNKNOWN
-    }*/
 
     private Context context;
     private RequestQueue requestQueue;
@@ -69,7 +61,7 @@ public class NetworkHelper<T> {
 
     protected GsonRequest createGsonRequest(@NonNull final Object requestTag, @NonNull MethodType type, @NonNull String endpoint, @Nullable T bodyParams, final Class<T> responseClass) {
         int methodType;
-        String url = NetworkLibrary.getBase_url() + endpoint;
+        String url = NetworkLibrary.getBaseUrl() + endpoint;
 
         switch (type) {
             case GET:
