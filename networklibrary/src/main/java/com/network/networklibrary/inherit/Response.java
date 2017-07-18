@@ -17,7 +17,7 @@ public class Response extends ResponseValidator {
     private static final String KEY_NONE = "None";
 
     @SerializedName("status")
-    private Boolean status;
+    private Boolean status = false;
     @SerializedName("error")
     public HashMap<String, String[]> errors;
 
