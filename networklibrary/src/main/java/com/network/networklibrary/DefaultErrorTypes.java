@@ -2,6 +2,8 @@ package com.network.networklibrary;
 
 import java.util.ArrayList;
 
+import static com.network.networklibrary.NetworkLibrary.typeList;
+
 /**
  * Created by Hemant on 7/12/2017.
  */
@@ -21,8 +23,6 @@ public enum DefaultErrorTypes implements ErrorType {
     @Override public String getTypeValue() {
         return typeValue;
     }
-
-    public static ArrayList<ErrorType> typeList = new ArrayList<>();
 
     static {
         for (ErrorType type : values()) {

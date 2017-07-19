@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Quest2Travel\Temp\network\app\app.iml" filepath="C:\Quest2Travel\Temp\network\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network.iml" filepath="$PROJECT_DIR$/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/networklibrary/networklibrary.iml" filepath="$PROJECT_DIR$/networklibrary/networklibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/networks-event-bus.iml" filepath="$PROJECT_DIR$/networks-event-bus.iml" />
+      <module fileurl="file://C:\Quest2Travel\Temp\network\networklibrary\networklibrary.iml" filepath="C:\Quest2Travel\Temp\network\networklibrary\networklibrary.iml" />
+      <module fileurl="file://C:\Quest2Travel\Temp\network\networks-event-bus.iml" filepath="C:\Quest2Travel\Temp\network\networks-event-bus.iml" />
     </modules>
   </component>
 </project>
