@@ -22,7 +22,7 @@ public class NetworkLibrary {
     private PreferenceManager privateManager;
     public static ArrayList<ErrorType> typeList;
 
-    public static void init(Context context, String baseurl, ErrorType... type) {
+    public static void init(Context context, String baseurl,, boolean isDevelopment, ErrorType... type) {
         if (instance == null) {
             instance = new NetworkLibrary(context, baseurl);
             typeList = new ArrayList<>();
